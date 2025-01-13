@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { FcDeleteRow } from "react-icons/fc";
+import { FaCheck } from "react-icons/fa";
 export default function Home() {
 
   const [notes, setNotes] = useState([]);
@@ -49,8 +49,8 @@ export default function Home() {
           {notes.map((note, index) => (
             <li key={index}>
               <div className="d-flex gap-4">
-                <p className="fs-3 fw-bold">{note}</p>
-                <FcDeleteRow onClick={() => deleteNote(index)} className="fs-2" />
+                <p className="fs-4 fw-bold">{note}</p>
+                <FaCheck onClick={() => deleteNote(index)} className="fs-5 text-success" />
               </div>
             </li>
           ))}
