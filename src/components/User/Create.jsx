@@ -2,20 +2,34 @@ import React from 'react'
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import axios from 'axios';
+import Swal from 'sweetalert2';
+import {useNavigate} from 'react-router-dom';
 
 export default function Create() {
 
     const { register, control, handleSubmit } = useForm();
+
+    const navigate=useNavigate();
+
     const registerUser=async (data)=>{
         // Make API call to save user data here
-        const response= await axios.post(`https://node-react-10.onrender.com/users`,data);
+
+        try{
+            const response= await axios.post(`https://node-react-10.onrender.com/users`,data);
+            
+            if(response.status===201){
+                Swal.fire("User Added Successfully", "User Added successfully!", "success");
+                navigate('/users');
+            }
+        }catch(e){
+            Swal.fire("ERROR 500", "AN ERROR OCCURED", "error");
+        }
         
-        console.log(response);
     }
   return (
     <>
-    <form onSubmit={handleSubmit(registerUser)}>
-        <div>
+    <form onSubmit={handleSubmit(registerUser)} className='py-5'>
+        <div className='d-flex flex-column gap-3'>
             <div className="form-floating">
                 <input type="text" className="form-control" id="userName" placeholder="Username" {...register("userName")} />
                 <label htmlFor="userName">Username</label>
@@ -33,7 +47,7 @@ export default function Create() {
                 <input type="text" className="form-control" id="phone" placeholder="Phone" {...register("phone")}/>
                 <label htmlFor="phone">Phone</label>
             </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
+            <button type="submit" className="btn btn-primary" style={{width: '8rem'}}>Submit</button>
         </div>
     </form>  
     
