@@ -3,18 +3,34 @@ import {Link} from 'react-router-dom'
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { MdHeight } from 'react-icons/md';
+import Loading from '../Loader/Loader';
 
 export default function Users() {
   const [users, setUsers] = useState([]); 
+  const [loading,setIsLoading]=useState(true);
 
   const getUsers = async () => {
-    const {data} = await axios.get('https://node-react-10.onrender.com/users');
-    setUsers(data.users); 
+    try{
+      const {data} = await axios.get('https://node-react-10.onrender.com/users');
+      setUsers(data.users); 
+      console.log(data.users);
+    }catch(e){
+      console.log(e);
+    }finally{
+      console.log('done');
+      setIsLoading(false);
+    }
+    
   };
 
   useEffect(() => {
     getUsers();
   }, []);
+
+  if(loading) {
+    console.log("Loading");
+    return <Loading />;
+  }
 
   const deleteUser = async (id) => {   
     // delete user from the server
