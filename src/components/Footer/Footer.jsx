@@ -8,7 +8,7 @@ export default function Footer() {
     <div className='d-flex justify-content-center flex-column gap-5 mt-5'>
         <div>
             <div className={`d-flex gap-5 justify-content-center ${style.footer}`}>
-                
+
                     <div className='d-flex justify-content-center flex-column' >    
                         <p className='fs-2 fw-bold'>AROUND THE WEB</p>
                         <div className='d-flex align-content-center justify-content-center gap-3 px-5 ' >
@@ -19,7 +19,7 @@ export default function Footer() {
                     </div>
             </div>
             <div className={`d-flex justify-content-center ${style.copyRight}`}>
-                <p>Copy Right RaheeqMousa99@gmail.com 2024</p>
+                <p>Copy Right RaheeqMousa99@gmail.com 2025</p>
             </div>
         </div>
 
