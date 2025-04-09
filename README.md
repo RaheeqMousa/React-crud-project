@@ -1,4 +1,4 @@
-# 🧑‍💼 Company Employee Management System
+# Company Employee Management System
 
 A simple web application to manage employee data with **Create**, **Read**, **Update**, and **Delete** (CRUD) operations. This app allows administrators to add, view, update, and remove employee records.
 
