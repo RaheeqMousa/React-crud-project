@@ -10,8 +10,7 @@ A simple web application to manage employee data with **Create**, **Read**, **Up
 - **Read**: View the list of employees with details like name, position, and contact info
 - **Update**: Edit employee details
 - **Delete**: Remove employee records
-- Fully responsive and user-friendly interface
-- Mobile-compatible
+- **Fully responsive and user-friendly interface**
 
 ## Tech Used
 - **Frontend**: React
