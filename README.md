@@ -13,7 +13,7 @@ A simple web application to manage employee data with **Create**, **Read**, **Up
 - Fully responsive and user-friendly interface
 - Mobile-compatible
 
-## 🛠️ Tech Used
+## Tech Used
 - **Frontend**: React
 - **Libraries/Frameworks**: Bootstrap (for styling)
 - **Axios**: for making API requests
