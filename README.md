@@ -3,7 +3,7 @@
 A simple web application to manage employee data with **Create**, **Read**, **Update**, and **Delete** (CRUD) operations. This app allows administrators to add, view, update, and remove employee records.
 
 # Live Demo:
-[View Employee Management App]: (https://react-crud-project-rlw4.onrender.com/)
+[View Employee Management App](https://react-crud-project-rlw4.onrender.com/)
 
 ## Features
 - **Create**: Add new employee records
